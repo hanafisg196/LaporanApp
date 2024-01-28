@@ -1,0 +1,19 @@
+package com.example.laporanapk.utils
+
+import com.example.laporanapk.services.Api
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+object RetrofitClient {
+
+    private const val BASE_URL = "http://192.168.1.50:8000/api/"
+
+
+        val instances : Api by lazy {
+            val retrofit = Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+            retrofit.create(Api::class.java)
+        }
+}

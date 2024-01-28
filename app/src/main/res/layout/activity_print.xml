@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrintActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            app:title="Print Pdf"
+            android:background="@color/primary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center" />
+        </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txtDateStartLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="Tanggal Awal"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppins"
+        android:drawablePadding="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_text"
+        android:drawableTint="@color/primary"
+        app:drawableStartCompat="@drawable/date_date" />
+    
+    <TextView
+        android:id="@+id/txtDateStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:textColor="@color/secondary_text"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_12ssp"
+        android:text="2024-01-01"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toEndOf="@+id/txtDateStartLabel"
+
+        />
+
+    <TextView
+        android:id="@+id/txtDateEndLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="Tanggal Akhir"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppins"
+        android:drawablePadding="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateStartLabel"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_text"
+        android:drawableTint="@color/primary"
+        app:drawableStartCompat="@drawable/date_date" />
+
+    <TextView
+        android:id="@+id/txtDateEnd"
+        android:layout_marginVertical="@dimen/_30sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:textColor="@color/secondary_text"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_12ssp"
+        android:text="2024-01-01"
+        app:layout_constraintTop_toBottomOf="@id/txtDateStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toEndOf="@+id/txtDateEndLabel"
+
+        />
+
+
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_marginVertical="@dimen/_30sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Print PDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDateEndLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
